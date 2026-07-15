@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio Web | Developer Informatika ITATS</title>
+    <meta name="description" content="Portofolio Front-End Developer dan mahasiswa Teknik Informatika di ITATS Surabaya. Spesialisasi dalam React, JavaScript, PHP, dan Laravel.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-dot"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Dynamic Background Orbs -->
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">
+                <span class="logo-accent">&lt;</span>My<span class="logo-accent">.Porto /&gt;</span>
+            </a>
+            
+            <div class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active-link">Beranda</a></li>
+                    <li><a href="#about" class="nav-link">Tentang</a></li>
+                    <li><a href="#projects" class="nav-link">Proyek</a></li>
+                    <li><a href="#contact" class="nav-link">Kontak</a></li>
+                </ul>
+                <div class="nav-close" id="navClose">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <!-- Theme Toggle Button -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+                    <i class="fa-solid fa-sun icon-sun"></i>
+                    <i class="fa-solid fa-moon icon-moon"></i>
+                </button>
+                
+                <div class="nav-toggle" id="navToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Hero Section -->
+        <section class="hero section" id="home">
+            <div class="hero-container container grid">
+                <!-- Left: Mock Code Card -->
+                <div class="hero-card glass-panel">
+                    <div class="card-header">
+                        <div class="card-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="card-title">developer_profile.js</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="card-profile-img-wrapper">
+                            <img src="avatar.png" alt="Yohan Profile Picture" class="card-profile-img">
+                        </div>
+                        <pre><code><span class="keyword">const</span> developer = {
+  name: <span class="string">'Yohan Octora Ramadhani'</span>,
+  role: <span class="string">'Front-End & Mobile Dev'</span>,
+  education: <span class="string">'Informatics ITATS'</span>,
+  skills: [
+    <span class="string">'React'</span>, <span class="string">'JavaScript'</span>, 
+    <span class="string">'Laravel'</span>, <span class="string">'Flutter'</span>
+  ],
+  passion: <span class="string">'Interactive UI/UX'</span>
+};</code></pre>
+                    </div>
+                </div>
+
+                <!-- Center: Greeting & Intro -->
+                <div class="hero-intro">
+                    <span class="hero-tag">DEVELOPER</span>
+                    <h1 class="hero-title">
+                        Halo, <br>
+                        Saya <span class="gradient-text">Yohan</span>,<br>
+                        Front-End & Mobile Developer
+                    </h1>
+                    <p class="hero-description">
+                        Saya membantu mengembangkan solusi website dan aplikasi mobile (Android/iOS) yang interaktif dan responsif menggunakan React dan Flutter.
+                    </p>
+                    <a href="#contact" class="btn btn-primary let-talk-btn">Mari Bicara <i class="fa-solid fa-paper-plane"></i></a>
+                </div>
+
+                <!-- Right: Stats Pill -->
+                <div class="stats-pill glass-panel">
+                    <div class="stat-item">
+                        <span class="stat-num">5</span>
+                        <span class="stat-lbl">Bahasa<br>Pemrograman</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">6</span>
+                        <span class="stat-lbl">Development<br>Tools</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-num">3+</span>
+                        <span class="stat-lbl">Tahun<br>Belajar & Proyek</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about section" id="about">
+            <div class="container">
+                <span class="section-subtitle">Kenalan Lebih Dekat</span>
+                <h2 class="section-title">Tentang Saya & Skill</h2>
+
+                <div class="about-container grid">
+                    <div class="about-text-content">
+                        <h3>Siapa Saya</h3>
+                        <p class="about-description">
+                            Saya adalah seorang Front-End Developer dan mahasiswa Teknik Informatika aktif semester 6 di ITATS (Institut Teknologi Adhitama Surabaya). Fokus utama saya adalah menciptakan antarmuka pengguna (UI) yang lancar dan mengintegrasikannya dengan logika back-end API yang solid.
+                        </p>
+                        <p class="about-description">
+                            Dalam pengembangan aplikasi mobile, saya menggunakan **Flutter** dan **React Native (React)** untuk membangun aplikasi Android & iOS yang berkinerja tinggi, responsif, dan interaktif.
+                        </p>
+                        
+                        <div class="about-stats grid">
+                            <!-- <div class="stat-card glass-panel">
+                                <span class="stat-num">Semester 6</span>
+                                <span class="stat-text">Kuliah Aktif di ITATS</span>
+                            </div> -->
+                            <div class="stat-card glass-panel">
+                                <span class="stat-num">Mobile</span>
+                                <span class="stat-text">Flutter & React Native</span>
+                            </div>
+                            <div class="stat-card glass-panel">
+                                <span class="stat-num">Web</span>
+                                <span class="stat-text">React.js & Laravel</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-skills-content">
+                        <h3>Persentase Keahlian</h3>
+                        
+                        <div class="skills-category-card glass-panel">
+                            <h4><i class="fa-solid fa-laptop-code"></i> Web Development</h4>
+                            <div class="skill-progress-bar">
+                                <div class="skill-info">
+                                    <span>HTML / CSS</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress-bar">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 75%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress-bar">
+                                <div class="skill-info">
+                                    <span>React.js</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress-bar">
+                                <div class="skill-info">
+                                    <span>PHP / Laravel</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="skills-category-card glass-panel">
+                            <h4><i class="fa-solid fa-mobile-screen-button"></i> App Development (Android)</h4>
+                            <div class="skill-progress-bar">
+                                <div class="skill-info">
+                                    <span>React Native (React)</span>
+                                    <span>60%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 60%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress-bar">
+                                <div class="skill-info">
+                                    <span>Flutter</span>
+                                    <span>30%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-progress-bar">
+                                <div class="skill-info">
+                                    <span>Git & Python (Dasar)</span>
+                                    <span>30%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-fill" style="width: 30%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section class="projects section" id="projects">
+            <div class="container">
+                <span class="section-subtitle">Karya Kreatif Saya</span>
+                <h2 class="section-title">Proyek Unggulan</h2>
+
+                <!-- Projects Grid -->
+                <div class="projects-container grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-panel" data-category="web">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder gradient-project-1">
+                                <i class="fa-solid fa-house-chimney project-icon"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Aplikasi Web</span>
+                            <h3 class="project-title">Dealer Management System Dashboard</h3>
+                            <p class="project-description">Web internal yang digunakan untuk membantu operasional dealer motor. Sistem ini dirancang untuk mempermudah monitoring data operasional dealer secara terpusat sehingga setiap tim dapat bekerja lebih efisien tanpa harus membuka banyak sistem yang berbeda.</p>
+                            <div class="project-tags">
+                                <span>Laravel</span>
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Octora20/tirtoagungmanukan" target="_blank" rel="noopener noreferrer" aria-label="GitHub Sumber Proyek"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" aria-label="Demo Langsung Proyek"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-panel" data-category="web">
+                        <div class="project-img-wrapper">
+                            <div class="project-img-placeholder gradient-project-2">
+                                <i class="fa-solid fa-key project-icon"></i>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Aplikasi Web (Kolaborasi)</span>
+                            <h3 class="project-title">RumahSewaBL - Rental Platform</h3>
+                            <p class="project-description">Antarmuka aplikasi penyewaan tempat tinggal secara modern untuk mempermudah pencarian, pemesanan, dan manajemen sewa rumah.</p>
+                            <div class="project-tags">
+                                <span>React.js</span>
+                                <span>Tailwind CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/Mikhael-agung/RumahSewaBL-FE" target="_blank" rel="noopener noreferrer" aria-label="GitHub Sumber Proyek"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" aria-label="Demo Langsung Proyek"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact section" id="contact">
+            <div class="container">
+                <span class="section-subtitle">Mari Berkolaborasi</span>
+                <h2 class="section-title">Hubungi Saya</h2>
+
+                <div class="contact-container grid">
+                    <div class="contact-info">
+                        <h3>Informasi Kontak</h3>
+                        <p class="contact-description">
+                            Punya proyek menarik yang ingin dikolaborasikan atau sekadar ingin menyapa? Silakan hubungi saya melalui formulir atau saluran langsung di bawah!
+                        </p>
+                        
+                        <div class="contact-details">
+                            <div class="contact-card glass-panel">
+                                <i class="fa-solid fa-envelope contact-icon"></i>
+                                <div>
+                                    <span class="contact-label">Email Saya</span>
+                                    <a href="mailto:yohanoctora04@gmail.com" class="contact-val">yohanoctora04@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-card glass-panel">
+                                <i class="fa-solid fa-map-pin contact-icon"></i>
+                                <div>
+                                    <span class="contact-label">Lokasi</span>
+                                    <span class="contact-val">Surabaya, Indonesia</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper glass-panel">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Nama Anda</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Anda</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Pesan Anda</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Tuliskan ide proyek Anda di sini..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                Kirim Pesan <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                            <div id="formFeedback" class="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container container grid">
+            <div>
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-accent">&lt;</span>My<span class="logo-accent">.Porto /&gt;</span>
+                </a>
+                <p class="footer-desc">Membangun solusi web premium dan interaktif.</p>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="https://github.com/Octora20" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/yohan-octora-ramadhani-1308002b3/" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-copy container">
+            <p>&copy; 2026 Yohan Octora Ramadhani. Hak cipta dilindungi undang-undang.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+</body>
+</html>

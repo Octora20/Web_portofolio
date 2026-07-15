@@ -357,6 +357,10 @@ body.light-theme .scroll-header {
     column-gap: 1.25rem;
 }
 
+.nav-socials-desktop {
+    display: none;
+}
+
 .theme-toggle {
     font-size: 1.15rem;
     cursor: pointer;
@@ -1129,6 +1133,29 @@ body.light-theme .theme-toggle .icon-sun {
     .nav-list {
         flex-direction: row;
         column-gap: 3rem;
+    }
+    .nav-socials-desktop {
+        display: flex;
+        column-gap: 1.5rem;
+        align-items: center;
+        margin-right: 1.5rem;
+    }
+    .nav-social-link {
+        font-size: var(--small-font-size);
+        font-weight: 500;
+        color: var(--text-color-light);
+        display: flex;
+        align-items: center;
+        column-gap: 0.35rem;
+        transition: var(--transition);
+    }
+    .nav-social-link i {
+        color: var(--second-color);
+        font-size: 1rem;
+    }
+    .nav-social-link:hover {
+        color: var(--second-color);
+        transform: translateY(-2px);
     }
     .hero-container {
         grid-template-columns: 1.1fr 1.4fr 0.7fr;
